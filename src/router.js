@@ -1,9 +1,11 @@
 import { Router } from 'express';
 
-import entityRouter from './entities/entity/entity.router';
+import roomRouter from './entities/rooms/rooms.router';
+import messageRouter from './entities/messages/messages.router';
 
 const router = Router();
 
-router.use(entityRouter);
+router.use(roomRouter);
+router.use(messageRouter);
 
 export default router;
