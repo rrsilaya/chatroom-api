@@ -33,11 +33,11 @@ export const getMessages = room => {
 
 export const sendMessage = (room, { sender, message, senderID }) => {
   return new Promise((resolve, reject) => {
-    const message = new Message({
+    const msg = new Message({
       room, sender, message, senderID
     });
 
-    message.save((err, msg) => {
+    msg.save((err, msg) => {
       if (err) {
         console.log(err);
         return reject(500);
